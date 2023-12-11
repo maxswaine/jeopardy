@@ -1,0 +1,9 @@
+.question-box {
+  width: 250px;
+  height: 150px;
+  border: 1px white solid;
+  margin: 10px;
+  &:hover {
+    border: black 1px solid;
+  }
+}
