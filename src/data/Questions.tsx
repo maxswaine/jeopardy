@@ -1,33 +1,5 @@
 import { Category, Question } from "../types/types";
 
-const chanukah: Question[] = [
-  {
-    value: 100,
-    question: "What is the capital of France?",
-    answer: "Paris",
-  },
-  {
-    value: 200,
-    question: "Who painted the Mona Lisa?",
-    answer: "Leonardo da Vinci",
-  },
-  {
-    value: 300,
-    question: "What is the powerhouse of the cell?",
-    answer: "Mitochondria",
-  },
-  {
-    value: 100,
-    question: "What is the capital of France?",
-    answer: "Paris",
-  },
-  {
-    value: 200,
-    question: "Who painted the Mona Lisa?",
-    answer: "Leonardo da Vinci",
-  },
-];
-
 const christmas1: Question[] = [
   {
     value: 200,
@@ -72,26 +44,55 @@ const christmas2: Question[] = [
     value: 400,
     question:
       "In the film “The Nightmare Before Christmas”, Jack calls Father Christmas by this name.",
-    answer: "Sandy Claws",
+    answer: "Who is Sandy Claws",
   },
   {
     value: 600,
     question:
       "In this country, it has become traditional for families across the country to eat KFC as their Christmas dinner.",
-    answer: "Japan",
+    answer: "What is Japan?",
   },
   {
     value: 800,
-    question: "Which company invented the idea that Santa Claus’ suit is red?",
-    answer: "Coca-cola",
+    question: "This company invented the idea that Santa Claus’ suit is red?",
+    answer: "What is Coca-cola?",
   },
   {
     value: 1000,
-    question: "Which popular Christmas beverage is also called 'milk punch'?",
-    answer: "Eggnog",
+    question: "This popular Christmas beverage is also called 'milk punch'?",
+    answer: "What is Eggnog?",
   },
 ];
 
+const chanukah: Question[] = [
+  {
+    value: 200,
+    question: "In English, Chanukah is also known by this name.",
+    answer: "What is the Festival of Lights?",
+  },
+  {
+    value: 400,
+    question: "These spinning tops are used during Chanukah",
+    answer: "What are Driedels",
+  },
+  {
+    value: 600,
+    question: "This is the amount of branches on a Menorah",
+    answer: "What is 9?",
+  },
+  {
+    value: 800,
+    question:
+      "The Hebrew letters on a driedel translate to this English phrase...",
+    answer: "What is `A great miracle happened there?`",
+  },
+  {
+    value: 1000,
+    question:
+      "The Jewish army that revolted against the Greeks was known by this name...",
+    answer: "Who are the Maccabees",
+  },
+];
 const christmasCategory: Category = {
   name: "Christmas Part 1",
   questions: christmas1,
@@ -110,4 +111,5 @@ const chanukahCategory: Category = {
 export const jeopardyQuestions: Category[] = [
   christmasCategory,
   christmasCategory2,
+  chanukahCategory,
 ];

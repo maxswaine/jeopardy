@@ -47,32 +47,42 @@ const Divs = ({ category, question, teamScores, onScoreChange }: DivProps) => {
 
   return (
     <div className="jeopardy-question">
-      <div className="question-box" onClick={handleCardClick}></div>
+      <div className="jeopardy-question__box" onClick={handleCardClick}>
+        {question.value}
+      </div>
       {questionOverlay && (
-        <div className="popup-overlay">
-          <div className="popup">
-            <div className="popup-navbar">
-              <h3 className="popup__title">
-                {category.name} for {question.value}
+        <div className="jeopardy-question__popup-overlay">
+          <div className="jeopardy-question__popup">
+            <div className="jeopardy-question__popup-navbar">
+              <h3 className="jeopardy-question__popup-rules">
+                Press ESC to go back
+              </h3>
+              <h3 className="jeopardy-question__popup-title">
+                {category.name.toUpperCase()} FOR {question.value}
               </h3>
               <img
-                className="popup__black-cross"
+                className="jeopardy-question__popup-black-cross"
                 src={blackCross}
                 alt="Black cross"
                 onClick={handlePopupClose}
               />
             </div>
-            <div className="popup-question-area">
-              <div className="popup-question">
-                <h3>{question.question}</h3>
+            <div className="jeopardy-question__popup-question-area">
+              <div className="jeopardy-question__popup-question">
+                <h3>{question.question.toUpperCase()}</h3>
               </div>
-              <div className="popup-answer">
+              <h3>
+                -----------------------------------------------------------------------------------------------------------------------------------------------------------
+              </h3>
+
+              <div className="jeopardy-question__popup-answer">
                 <h3>
-                  {answerVisibility[question.question] && question.answer}
+                  {answerVisibility[question.question] &&
+                    question.answer.toUpperCase()}
                 </h3>
               </div>
             </div>
-            <div className="popup-team-scores">
+            <div className="jeopardy-question__popup-team-scores">
               {teamScores.map((team, index) => {
                 return (
                   <Points

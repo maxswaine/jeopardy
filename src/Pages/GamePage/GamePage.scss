@@ -1,4 +1,32 @@
+@use "../../Styles/variables" as *;
+
 .game-container {
-  display: flex;
   width: 100%;
+}
+
+.categories-container {
+  display: flex;
+}
+.category {
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $value-font;
+    font-size: 20px;
+    border: black solid 1px;
+    height: 100px;
+    width: 200px;
+    color: white;
+  }
+}
+.teams-score-display {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  &__team {
+  }
+
+  &__score {
+  }
 }

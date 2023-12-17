@@ -2,7 +2,6 @@ import { useState } from "react";
 import Divs from "../../components/Divs/Divs";
 import { Category, Question, Team } from "../../types/types";
 import "./GamePage.scss";
-import Points from "../../components/Points/Points";
 
 type GamePageProps = {
   categories: Category[];
@@ -24,31 +23,32 @@ const GamePage = ({ categories, teams }: GamePageProps) => {
 
   return (
     <div className="game-container">
-      {categories.map((category, index) => (
-        <div className="category" key={index}>
-          <h2 className="title">{category.name}</h2>
-          {category.questions.map(
-            (question: Question, questionIndex: number) => (
-              <Divs
-                key={questionIndex}
-                question={question}
-                category={category}
-                teamScores={teamScores}
-                onScoreChange={handleScoreChange}
-              />
-            )
-          )}
-        </div>
-      ))}
+      <div className="categories-container">
+        {categories.map((category, index) => (
+          <div className="category" key={index}>
+            <div className="category__title">{category.name.toUpperCase()}</div>
+            {category.questions.map(
+              (question: Question, questionIndex: number) => (
+                <Divs
+                  key={questionIndex}
+                  question={question}
+                  category={category}
+                  teamScores={teamScores}
+                  onScoreChange={handleScoreChange}
+                />
+              )
+            )}
+          </div>
+        ))}
+      </div>
       <div className="teams-score-display">
         {teams.map((team, index) => (
-          <div key={index}>
-            <h2>
+          <div key={index} className="teams-score-display__team">
+            <h2 className="teams-score-display__score">
               {team.name} Score: {team.score}
             </h2>
           </div>
         ))}
-        ;
       </div>
     </div>
   );
