@@ -5,8 +5,11 @@ export type Question = {
 };
 
 export type Category = {
-    name: string;
-    questions: Question[];
-  };
-  
-  
+  name: string;
+  questions: Question[];
+};
+
+export type Team = {
+  name: string;
+  score: number;
+};

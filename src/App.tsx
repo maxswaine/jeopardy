@@ -1,12 +1,12 @@
-import GamePage from "./Pages/GamePage/GamePage";
-import { Question } from "./Types/types";
 import "./Styles/main.scss";
-import { jeopardyQuestions } from "./Data/Data";
+import { jeopardyQuestions } from "./data/Questions";
+import { teams } from "./data/Teams";
+import GamePage from "./pages/GamePage/GamePage";
 
 function App() {
   return (
     <>
-      <GamePage categories={jeopardyQuestions}></GamePage>
+      <GamePage categories={jeopardyQuestions} teams={teams}></GamePage>
     </>
   );
 }

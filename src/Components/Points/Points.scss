@@ -1,0 +1,35 @@
+.points {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+
+  &__button {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &--increment {
+      background-color: lightgreen;
+      border-color: green;
+      color: green;
+    }
+
+    &--decrement {
+      background-color: #ffcccb;
+      border-color: #ff6347;
+      color: #ff6347;
+    }
+  }
+
+  &__score {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
